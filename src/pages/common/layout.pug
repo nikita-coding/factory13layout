@@ -1,0 +1,28 @@
+doctype html
+
+block variables
+
+html(lang='ru')
+    head
+        title #{title}
+
+        link(rel="stylesheet" href="assets/css/index.css")
+
+        //link(rel="preload" as="font" href="assets/fonts/Ubuntu-Regular.woff" crossorigin="anonymous")
+        //link(rel="preload" as="font" href="assets/fonts/Ubuntu-Bold.woff" crossorigin="anonymous")
+        //link(rel="preload" as="font" href="assets/fonts/Ubuntu-Medium.woff" crossorigin="anonymous")
+
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8")
+
+        block scripts
+    body
+        .page-wrap
+            include header
+            block content
+            include footer
+
+            //include ../../img/sprite.svg
+
+        script(src="//code.jquery.com/jquery-3.6.0.min.js")
+        script(src="assets/js/app.js")

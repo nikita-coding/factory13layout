@@ -1,0 +1,87 @@
+.header
+	position: absolute
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 9
+	max-width: $page-max-width
+	min-width: $page-min-width
+	border-bottom: 1px solid rgba(#C7B299, .3)
+
+	+ *
+		padding-top: 11.3rem
+
+	&__flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		height: 100%
+		min-height: 11.3rem
+
+	&__logo
+		margin-top: .1rem
+
+	&__description
+		font-size: 1.5em
+		font-weight: 400
+		line-height: 1.2
+		margin-bottom: .1rem
+
+	&__description1
+		color: #EFEFEF
+
+	&__description2
+		color: #C7B299
+
+	&__address
+		font-size: 1.5em
+		line-height: 1.2
+		position: relative
+		max-width: 23rem
+		margin-left: 2.5rem
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			width: 1.7rem
+			height: 2.2rem
+			background: url("data:image/svg+xml,%3Csvg width='17' height='22' viewBox='0 0 17 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.73445 0.171875C4.22065 0.171875 0.576172 3.81635 0.576172 8.33015C0.576172 12.844 8.73445 21.9719 8.73445 21.9719C8.73445 21.9719 16.8927 12.844 16.8927 8.33015C16.8927 3.81635 13.2483 0.171875 8.73445 0.171875ZM8.73445 11.239C7.12954 11.239 5.82556 9.93506 5.82556 8.33015C5.82556 6.72525 7.12954 5.42126 8.73445 5.42126C10.3394 5.42126 11.6433 6.72525 11.6433 8.33015C11.6433 9.93506 10.3394 11.239 8.73445 11.239Z' fill='%23C7B299'/%3E%3C/svg%3E%0A") center center no-repeat
+			left: -2.6rem
+			top: -.5rem
+
+	&__address-text
+		color: #EFEFEF
+
+	&__worktime
+		color: #C7B299
+		font-size: 1.6rem
+		margin-top: .1rem
+		margin-bottom: -.6rem
+
+	&__phone
+		position: relative
+		&:before
+			content: ""
+			display: block
+			position: absolute
+			left: -2.9rem
+			top: 0.6rem
+			width: 2.1rem
+			height: 2rem
+			background: url("data:image/svg+xml,%3Csvg width='21' height='20' viewBox='0 0 21 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.3079 14.3139C10.7775 12.4128 8.50005 10.1314 6.60244 7.59624L8.62677 5.56831C9.25914 4.93471 9.25914 3.92066 8.62677 3.28706L5.84335 0.498634C5.21073 -0.134961 4.07209 -0.134961 3.43947 0.498634L1.54181 2.39991C-2.50666 6.45552 14.32 23.3125 18.3689 19.3833L20.3932 17.3554C21.0256 16.7218 21.0256 15.7079 20.3932 15.0741L17.6098 12.2857C16.9771 11.6521 15.9649 11.6521 15.3323 12.2857L13.3079 14.3139Z' fill='%23C7B299'/%3E%3C/svg%3E%0A") center center no-repeat
+
+	&__phone-number
+		font-weight: 700
+		font-size: 1.8rem
+		line-height: 2
+		color: #ffffff
+		text-decoration: none
+		margin-left: 0.5rem
+
+	&__callback
+		font-size: 1.5em
+		display: block
+		text-decoration: underline
+		line-height: 2
+		color: #EFEFEF
+		margin-bottom: -.3rem

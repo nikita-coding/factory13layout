@@ -1,0 +1,40 @@
+{
+  "name": "verstka",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "dev": "gulp dev",
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "author": "Nikita Kuznetsov",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "css-loader": "^6.5.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.*",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-webp": "^3.*",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.44.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.64.4",
+    "webpack-stream": "^7.0.0"
+  },
+  "browserslist": [
+    "last 3 versions"
+  ]
+}
