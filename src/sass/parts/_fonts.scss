@@ -1,0 +1,168 @@
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtraBold.eot');
+//	src: local('Berlingske Serif Extra Bold'), local('../fonts/BerlingskeSerif/BerlingskeSerif-ExtraBold'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtraBold.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtraBold.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtraBold.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtraBold.ttf') format('truetype');
+//	font-weight: 800;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-Md.eot');
+//	src: local('../fonts/BerlingskeSerif/BerlingskeSerif-Md'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Md.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Md.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Md.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Md.ttf') format('truetype');
+//	font-weight: 500;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-LtItalic.eot');
+//	src: local('../fonts/BerlingskeSerif/BerlingskeSerif-LtItalic'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-LtItalic.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-LtItalic.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-LtItalic.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-LtItalic.ttf') format('truetype');
+//	font-weight: 300;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-BoldItalic.eot');
+//	src: local('Berlingske Serif Bold Italic'), local('../fonts/BerlingskeSerif/BerlingskeSerif-BoldItalic'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BoldItalic.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BoldItalic.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BoldItalic.ttf') format('truetype');
+//	font-weight: bold;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta.eot');
+//	src: local('Berlingske Serif ExtBd Ita'), local('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-ExtBdIta.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-SemBdIta.eot');
+//	src: local('Berlingske Serif SemBd Ita'), local('../fonts/BerlingskeSerif/BerlingskeSerif-SemBdIta'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemBdIta.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemBdIta.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemBdIta.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemBdIta.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-SemiBold.eot');
+//	src: local('Berlingske Serif Semi Bold'), local('../fonts/BerlingskeSerif/BerlingskeSerif-SemiBold'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemiBold.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemiBold.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemiBold.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-SemiBold.ttf') format('truetype');
+//	font-weight: 600;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-Lt.eot');
+//	src: local('../fonts/BerlingskeSerif/BerlingskeSerif-Lt'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Lt.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Lt.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Lt.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Lt.ttf') format('truetype');
+//	font-weight: 300;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-Italic.eot');
+//	src: local('Berlingske Serif Italic'), local('../fonts/BerlingskeSerif/BerlingskeSerif-Italic'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Italic.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Italic.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Italic.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Italic.ttf') format('truetype');
+//	font-weight: normal;
+//	font-style: italic;
+//}
+
+@font-face {
+	font-family: 'Berlingske Serif';
+	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-Regular.eot');
+	src: local('Berlingske Serif Regular'), local('../fonts/BerlingskeSerif/BerlingskeSerif-Regular'),
+	url('../fonts/BerlingskeSerif/BerlingskeSerif-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/BerlingskeSerif/BerlingskeSerif-Regular.woff2') format('woff2'),
+	url('../fonts/BerlingskeSerif/BerlingskeSerif-Regular.woff') format('woff'),
+	url('../fonts/BerlingskeSerif/BerlingskeSerif-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-Bold.eot');
+//	src: local('Berlingske Serif Bold'), local('../fonts/BerlingskeSerif/BerlingskeSerif-Bold'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Bold.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Bold.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Bold.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Bold.ttf') format('truetype');
+//	font-weight: bold;
+//	font-style: normal;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic.eot');
+//	src: local('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-MdItalic.ttf') format('truetype');
+//	font-weight: 500;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic.eot');
+//	src: local('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-BlkItalic.ttf') format('truetype');
+//	font-weight: 900;
+//	font-style: italic;
+//}
+//
+//@font-face {
+//	font-family: 'Berlingske Serif';
+//	src: url('../fonts/BerlingskeSerif/BerlingskeSerif-Blk.eot');
+//	src: local('../fonts/BerlingskeSerif/BerlingskeSerif-Blk'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Blk.eot?#iefix') format('embedded-opentype'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Blk.woff2') format('woff2'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Blk.woff') format('woff'),
+//	url('../fonts/BerlingskeSerif/BerlingskeSerif-Blk.ttf') format('truetype');
+//	font-weight: 900;
+//	font-style: normal;
+//}
+//

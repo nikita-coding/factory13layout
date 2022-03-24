@@ -1,3 +1,4 @@
+include ../_mixins
 .first-screen
 	.container.first-screen__container
 		.first-screen__left
@@ -5,7 +6,8 @@
 			.first-screen__subtitle под ключ за 3-7 дней
 			.first-screen__prod
 				.first-screen__prod-title Производство
-				.first-screen__prod-square 1 000 м
+				.first-screen__prod-square 1 000
+					span.first-screen__prod-square-m м
 					span.first-screen__prod-square2 2
 
 			.first-screen__for
@@ -18,6 +20,8 @@
 			.first-screen__price-today скажем стоимость и сроки сегодня
 
 		.first-screen__right
+			.first-screen__director
+				+assets_img('first-screen-director', 'png')
 			.first-screen__message Я лично отвечаю<wbr>за качество и сроки<wbr>по&nbsp;каждому заказу
 			.first-screen__autograph
 				div.uppercase Кочнев Илья Дмитриевич

@@ -1,0 +1,5 @@
+mixin assets_img(name, type)
+	picture
+		source(srcset!="/assets/img/" + name + ".webp" type="image/webp")
+		source(srcset!="/assets/img/" + name + "." + type type="image/" + type)
+		img(src!="/assets/img/" + name + "." + type alt=name)
