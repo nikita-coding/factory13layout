@@ -16,13 +16,18 @@ include ../_mixins
 				.first-screen__for2 DIY энтузиастов,
 				.first-screen__for2 выставочных компаний
 
-			.button Рассчитать стоимость
-			.first-screen__price-today скажем стоимость и сроки сегодня
+			.first-screen__button-wrap
+				.button.button_xl Рассчитать стоимость
+				.first-screen__price-today скажем стоимость и сроки сегодня
 
 		.first-screen__right
 			.first-screen__director
 				+assets_img('first-screen-director', 'png')
-			.first-screen__message Я лично отвечаю<wbr>за качество и сроки<wbr>по&nbsp;каждому заказу
+			.first-screen__message
+				.first-screen__message-bg
+				.first-screen__message-text Я лично отвечаю за&nbsp;качество и&nbsp;сроки по&nbsp;каждому заказу
+				.first-screen__message-signature
+					+assets_img('first-screen-message-signature', 'png')
 			.first-screen__autograph
-				div.uppercase Кочнев Илья Дмитриевич
-				div Основатель компании
+				.first-screen__autograph-name Кочнев Илья Дмитриевич
+				.first-screen__autograph-who Основатель компании

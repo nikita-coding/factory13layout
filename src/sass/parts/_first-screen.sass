@@ -1,14 +1,15 @@
 .first-screen
-	min-height: 80rem
-	background: #282825 url("../img/first-screen-background.webp") center center no-repeat
+	height: 74.4rem
+	overflow: hidden
+	background: #282825 url("../img/first-screen-background.webp") top center no-repeat
 	position: relative
 
 	&__container
 		display: flex
-		padding-top: 7.7rem
 
 	&__left
 		max-width: 58rem
+		padding-top: 7.8rem
 
 	&__title
 		font: 4.8rem 'Playfair Display'
@@ -17,7 +18,7 @@
 		color: #FFFFFF
 
 	&__subtitle
-		margin-top: 1.1rem
+		margin-top: .3rem
 		font-weight: 300
 		font-size: 38px
 		text-transform: uppercase
@@ -32,8 +33,8 @@
 			background: url("data:image/svg+xml,%3Csvg width='162' height='46' viewBox='0 0 162 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M161.84 6.30117L157.737 2.23871L156.27 7.82273L161.84 6.30117ZM1.24064 45.6454C35.554 16.2726 98.7865 -8.73261 157.363 5.64188L157.601 4.67069C98.6369 -9.79901 35.0832 15.3593 0.590347 44.8857L1.24064 45.6454Z' fill='url(%23paint0_linear_0_197)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_0_197' x1='0.656274' y1='61.0003' x2='206.001' y2='4.00035' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D5B07A' stop-opacity='0'/%3E%3Cstop offset='0.494792' stop-color='%23F0DBB7'/%3E%3Cstop offset='1' stop-color='%23D5B07A' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") center center no-repeat
 			width: 16.2rem
 			height: 4.6rem
-			left: 29rem
-			top: 0
+			left: 24.6rem
+			top: 1.3rem
 			position: absolute
 
 	&__prod-title
@@ -46,41 +47,128 @@
 	&__prod-square
 		color: #EFEFEF
 		font: 7rem 'Berlingske Serif', sans-serif
+		margin: -1.3rem 0 0 -.6rem
 
 	&__prod-square-m
-		font-size: 3.6rem
+		font-size: 4.8rem
 		display: inline-block
-		margin-left: 1rem
+		margin-left: 1.3rem
 
 	&__prod-square2
-		font-size: 4.8rem
+		font-size: 3rem
 		color: #C7B299
-		transform: translateY(-3rem)
+		transform: translateY(-2.6rem)
 		display: inline-block
 
 	&__for
-		font-size: 1.8rem
-		line-height: 1.2
+		padding: 4rem 0 0 3rem
+		position: relative
+
+		&:before
+			position: absolute
+			content: ""
+			top: 2.7rem
+			left: 0
+			width: 3.15rem
+			height: 2px
+			background: #C7B299
 
 	&__for1
+		font-size: 1.4rem
 		font-weight: 700
 		text-transform: uppercase
 		color: #C7B299
+		line-height: 1.4
 
 	&__for2
 		color: #EFEFEF
+		font-size: 1.8rem
+		line-height: 1.15
+		font-weight: 300
+
+	&__button-wrap
+		max-width: 32.1rem
+		margin-top: 5rem
 
 	&__price-today
+		margin-top: 1.2rem
+		color: #EFEFEF
+		font-size: 1.54rem
+		text-align: center
 
 	&__right
+		position: relative
 
 	&__director
+		position: absolute
+		left: 11.9rem
+		top: 1.5rem
 
 	&__message
+		border-radius: 25px 5px 5px 5px
+		overflow: hidden
+		position: absolute
+		top: 40.1rem
+		left: 2.1rem
+		width: 25.7rem
+
+
+	&__message-bg
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 1
+		background: rgba(#14304B, .5)
+		mix-blend-mode: multiply
+
+	&__message-text
+		position: relative
+		z-index: 2
+		padding: 2.8rem 3.9rem 3.3rem 6.2rem
+		color: #C7B299
+		font-size: 1.6rem
+		line-height: 1.1875
+		box-sizing: border-box
+
+		&:before
+			content: ""
+			width: 3.15rem
+			height: 1px
+			background: #C7B299
+			position: absolute
+			top: 3.8rem
+			left: 2.2rem
+
+	&__message-signature
+		position: absolute
+		bottom: 0.1rem
+		right: 1.7rem
+		mix-blend-mode: screen
 
 	&__autograph
+		font-weight: 400
+		font-size: 1.4rem
+		line-height: 1.17214
+		color: #EFEFEF
+		position: absolute
+		top: 54.3rem
+		left: 15.4rem
+		width: 21rem
+		white-space: nowrap
+
+	&__autograph-name
+		text-transform: uppercase
+
+	&__autograph-who
+		font-size: 1.5rem
 
 
 .no-webp
 	.first-screen
 		background-image: url("../img/first-screen-background.jpg")
+
+		&__message
+			&:after
+				background-image: url('../img/first-screen-message-signature.png')
