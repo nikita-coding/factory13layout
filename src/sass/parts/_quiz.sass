@@ -1,0 +1,54 @@
+.quiz
+	background: #2B403D
+	border-radius: 3.5rem
+	display: flex
+	position: relative
+	padding: 2.4rem
+	min-height: 45.4rem
+
+	&__steps
+		position: absolute
+		top: -2.1rem
+		display: flex
+		align-items: center
+
+	&__step
+		width: 4.2rem
+		height: 4.2rem
+		font-family: 'Georgia', serif
+		font-weight: 400
+		font-size: 2.4rem
+		text-align: center
+		color: #293447
+		display: flex
+		align-items: center
+		justify-content: center
+		background: #EDEDED
+		border-radius: 10rem
+		padding-bottom: 0.5rem
+		box-sizing: border-box
+		position: relative
+
+		&:not(:first-child)
+			margin-left: 13.2rem
+
+		&_done
+			background: #C7B299
+			box-shadow: 0 4px 12px rgba(199, 178, 153, 0.4), 0 4px 4px rgba(0, 0, 0, 0.25)
+
+			&:not(:first-child)
+				&:before
+					content: ""
+					height: .4rem
+					width: 13.4rem
+					right: 4.2rem
+					position: absolute
+					top: 0
+					bottom: 0
+					margin: auto
+					background: #C7B299
+
+
+
+	&__title
+		margin-top: 10rem
