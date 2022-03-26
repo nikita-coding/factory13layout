@@ -19,6 +19,8 @@ const
     //webpack = require('webpack'),
     webpackStream = require('webpack-stream'),
 
+    { VueLoaderPlugin } = require('vue-loader'),
+
 
     // variables
     buildPath = 'dist',
@@ -57,7 +59,7 @@ function sassF() {
         .pipe(gulpIf(!production_mode, sourcemaps.init()))
         .pipe(sass())
         .pipe(gulpIf(production_mode, autoprefixer()))
-        .pipe(gulpIf(production_mode, minifyCss({keepSpecialComments : 0})))
+        .pipe(gulpIf(production_mode, minifyCss({keepSpecialComments : 0, processImport: false})))
         .pipe(gulpIf(!production_mode, sourcemaps.write('.')))
         .pipe(gulp.dest(cssPath))
         // сносим карты сайта для продакшна
@@ -102,12 +104,16 @@ function jsF(watch = false) {
                 path: jsBuildPath,
             },
             resolve: {
-                extensions: ['.js', '/index.js']
+                extensions: ['.js', '.vue', '/index.js', '/index.vue']
             },
             mode: webpack_mode, // development or production
             watch: watch,
             module: {
                 rules: [
+                    {
+                        test: /\.vue$/,
+                        loader: 'vue-loader'
+                    },
                     {
                         test: /\.(js)$/,
                         exclude: /(node_modules)/,
@@ -117,13 +123,26 @@ function jsF(watch = false) {
                                 presets: ['@babel/preset-env']
                             }
                         }]
-
                     },
+                    {
+                        test: /\.css$/,
+                        use: [
+                            'vue-style-loader',
+                            'css-loader'
+                        ]
+                    },
+                    {
+                        test: /\.pug$/,
+                        loader: 'pug-plain-loader'
+                    }
                 ]
             },
             externals: {
                 jquery: 'jQuery',
             },
+            plugins: [
+                new VueLoaderPlugin()
+            ],
         }))
         .pipe(gulp.dest(jsBuildPath));
 }
