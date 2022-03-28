@@ -1,0 +1,39 @@
+include ../_mixins
+.invite
+	.container
+		.title-block
+			.title-block__title.invite__title Приглашаю вас на производство, чтобы вы оценили качество лично
+			.title-block__separator
+			.title-block__subtitle.invite__subtitle С нами вам не придется ничего переделывать
+
+		.invite__block
+			.invite__dir
+				+assets_img('first-screen-director', 'png')
+			.invite__quote
+				.invite__quote-text «Все наши станки с ЧПУ. Мало&nbsp;процессов закладывается на ручной труд. Человеческий&nbsp;фактор сведен&nbsp;в&nbsp;минимум.&#32;
+					.text-gold Приходите&nbsp;посмотреть сами.»
+
+				.invite__signature
+					.invite__signature-name Илья Кочнев
+					.invite__signature-who директор
+
+			.invite__separator
+
+			.invite__right
+				.invite__logo
+					img(src="/assets/img/logo-dark.svg")
+
+				.invite__button
+					.button.button_xl записаться на просмотр производства
+					.invite__under-button для руководителей
+
+		.invite__photos
+			.invite__photo
+				+assets_img('invite-photo-1', 'jpg')
+				.invite__photo-text Кромка
+			.invite__photo
+				+assets_img('invite-photo-2', 'jpg')
+				.invite__photo-text Присадка
+			.invite__photo
+				+assets_img('invite-photo-3', 'jpg')
+				.invite__photo-text Раскрой

@@ -1,0 +1,118 @@
+.we-are-chosen
+	padding: 14.8rem 0 11.8rem
+	position: relative
+
+	> *
+		position: relative
+		z-index: 2
+
+	&__gradient1
+		position: static
+		z-index: 1
+		&:before, &:after
+			content: ""
+			display: block
+			position: absolute
+			border-radius: 100%
+			background: #233230
+			mix-blend-mode: screen
+			filter: blur(150px)
+			width: 79.3rem
+			height: 39.3rem
+
+		&:before
+			top: 6.9rem
+			left: 0
+			right: 0
+			margin: auto
+
+		&:after
+			bottom: 22.6rem
+			left: 40%
+
+	&__gradient2
+		position: static
+		z-index: 1
+		&:before, &:after
+			content: ""
+			display: block
+			position: absolute
+			width: 92.5rem
+			height: 141.7rem
+			background: #233230
+			mix-blend-mode: multiply
+			opacity: 0.5
+			border-radius: 100%
+			filter: blur(100px)
+
+		&:before
+			right: -40rem
+			top: 10rem
+		&:after
+			top: 4rem
+			left: -10rem
+
+
+	&__section-title
+		max-width: 69.2rem
+		padding-bottom: 0.3rem
+
+	&__section-subtitle
+		padding-top: 1rem
+
+	&_no-brak
+		font-weight: 900
+		color: #C7B299
+		position: relative
+		display: inline-block
+
+		&:after
+			content: ""
+			position: absolute
+			bottom: -0.8rem
+			left: 0
+			right: 0
+			margin: auto
+			width: 13.1rem
+			height: .4rem
+			background: url("data:image/svg+xml,%3Csvg width='131' height='4' viewBox='0 0 131 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.17969 1.89497C3.32653 0.196469 5.47338 0.196469 7.62022 1.89497C9.76707 3.59346 11.9139 3.59346 14.0608 1.89497C16.2076 0.196469 18.3544 0.196469 20.5013 1.89497C22.6481 3.59346 24.795 3.59346 26.9418 1.89497C29.0887 0.196469 31.2355 0.196469 33.3824 1.89497C35.5292 3.59346 37.676 3.59346 39.8229 1.89497C41.9697 0.196469 44.1166 0.196469 46.2634 1.89497C48.4103 3.59346 50.5571 3.59346 52.704 1.89497C54.8508 0.196469 56.9976 0.196469 59.1445 1.89497C61.2913 3.59346 63.4382 3.59346 65.585 1.89497C67.7319 0.196469 69.8787 0.196469 72.0256 1.89497C74.1724 3.59346 76.3192 3.59346 78.4661 1.89497C80.6129 0.196469 82.7598 0.196469 84.9066 1.89497C87.0535 3.59346 89.2003 3.59346 91.3472 1.89497C93.494 0.196469 95.6408 0.196469 97.7877 1.89497C99.9345 3.59346 102.081 3.59346 104.228 1.89497C106.375 0.196469 108.522 0.196469 110.669 1.89497C112.816 3.59346 114.962 3.59346 117.109 1.89497C119.256 0.196469 121.403 0.196469 123.55 1.89497C125.697 3.59346 127.844 3.59346 129.99 1.89497' stroke='%23C7B299'/%3E%3C/svg%3E%0A") center center no-repeat
+
+
+	&__items
+		margin-top: 14.7rem
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-column-gap: 3.6rem
+		grid-row-gap: 11.3rem
+
+	&__item
+		img
+			width: 100%
+			display: block
+			border-radius: 2.5rem
+
+	&__item-content
+		margin-top: 2.2rem
+		display: flex
+		img
+			width: 2.6rem
+			height: 2.6rem
+			flex-shrink: 0
+
+	&__item-text
+		margin-top: .4rem
+		margin-left: 1.3rem
+		font-weight: 400
+		font-size: 1.6rem
+		line-height: 1.1875
+		color: #EFEFEF
+
+	&__gold
+		font-weight: 700
+		color: #C7B299
+		display: inline
+
+
+	&__button
+		max-width: 35.2rem
+		margin: 7.8rem auto 0
