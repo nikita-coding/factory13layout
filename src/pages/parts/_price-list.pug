@@ -23,13 +23,14 @@
 						|  доступ к ценам и
 						strong  скидка на первый заказ
 
-				form.price-list__form
+				form.price-list__form(action="/thanks/" method="post")
+					input(type="hidden" name="form-name" value="Получить прайс лист")
 					.form-group
 						.form-group__label E-mail* (на почту пришлем прайс)
-						input.form-group__input.form-group__input_email(type="text" placeholder="ivanov@mail.ru")
+						input.form-group__input.form-group__input_email(type="email" name="email_for_price_list" placeholder="ivanov@mail.ru" required)
 					.form-group
 						.form-group__label Телефон (обсудим индивидуальные условия)
-						input.form-group__input.form-group__input_phone(type="text" placeholder="Введите номер")
+						input.form-group__input.form-group__input_phone(type="text" name="phone" placeholder="Введите номер" required)
 
 					.price-list__button
 						.button.button_xl Получить прайс-лист

@@ -13,5 +13,23 @@ header.header
 				.header__worktime Пн-пт с 9:00 до 18:00
 
 			.header__phone
-				a.header__phone-number(href="tel:8") + 7 (343) 213-66-13
-				a.header__callback(href="#") Перезвоним за 27 секунд
+				a.header__phone-number(href="tel:+73432136613") + 7 (343) 213-66-13
+				.header__callback(data-fancybox="" data-src="#callback_modal") Заказать звонок
+
+	.modal.modal_form.callback-modal#callback_modal
+		.title-block
+			.title-block__title.modal__title Заказать звонок
+			.modal__subtitle Оставьте свой номер и мы перезвоним Вам.
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Заказать звонок")
+
+			.modal__phone-form
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 Перезвоните мне
+
+			.modal__form-pk Нажимая на кнопку, вы соглашаетесь с&#32;
+				a(href="/policy/") политикой конфиденциальности

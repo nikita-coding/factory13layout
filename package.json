@@ -11,6 +11,7 @@
   "author": "Nikita Kuznetsov",
   "license": "MIT",
   "dependencies": {
+    "@fancyapps/ui": "^4.0.26",
     "vue": "^2.6.12"
   },
   "devDependencies": {

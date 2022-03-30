@@ -1,0 +1,107 @@
+.thanks
+	&__flex
+		display: flex
+		min-height: 83.8rem
+
+	&__left
+		margin: 17.5rem 0 0 auto
+		max-width: 56rem
+
+	&__title
+		margin-bottom: 2.4rem
+		position: relative
+		&:before
+			content: ""
+			width: 4.4rem
+			height: 1px
+			background: #333333
+			position: absolute
+			top: 3.1rem
+			left: -6rem
+
+	&__subtitle
+		font-size: 2.4rem
+		margin-bottom: 10.3rem
+		color: #333333
+
+	&__text
+		font-size: 1.6rem
+		line-height: 1.5
+		color: #4E4E4E
+
+		strong
+			font-weight: 700
+
+	&__whatsapp
+		position: relative
+		margin: 4.7rem 0 0 37.4rem
+		display: block
+		img
+			width: 8.8rem
+			height: 8.8rem
+
+		&:before
+			content: ""
+			width: 10.8rem
+			height: 6.5rem
+			position: absolute
+			background: url("data:image/svg+xml,%3Csvg width='108' height='65' viewBox='0 0 108 65' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M107.685 62.1647L103.222 58.5022L102.281 64.1986L107.685 62.1647ZM103.349 60.9426C90.2393 58.2606 68.1499 49.9265 47.5779 38.8445C37.2958 33.3057 27.4076 27.0882 19.2194 20.5588C11.0241 14.0239 4.56563 7.20308 1.10086 0.466324L0.211575 0.923688C3.77031 7.84314 10.3545 14.7689 18.5959 21.3407C26.8443 27.9179 36.7866 34.1672 47.1037 39.7249C67.73 50.8361 89.9134 59.2146 103.149 61.9223L103.349 60.9426Z' fill='%2399A0A9'/%3E%3C/svg%3E%0A") center center no-repeat
+			left: -11.8rem
+			top: -3.7rem
+
+	&__phone-error
+		font-size: 1.6rem
+		line-height: 1.1875
+		color: #333333
+		text-decoration: underline
+		cursor: pointer
+		padding: 0.3rem
+
+	&__right
+		align-self: flex-end
+		max-width: 50rem
+		line-height: 0
+		transform: translateX(2.6rem)
+		img
+			width: 50.5rem
+			height: 75.7rem
+
+.fix-phone-modal
+	width: 100%
+	max-width: 48rem
+
+	&.fancybox__content
+		padding: 3.6rem 5.8rem 5.4rem
+
+	&__title
+		font-weight: 500
+		font-size: 1.8rem
+		line-height: 1.1666
+		text-align: center
+		color: #333333
+		padding: 2.5rem 0 2rem
+
+
+	&__subtitle
+		font-weight: 400
+		font-size: 1.6rem
+		line-height: 1.1875
+		text-align: center
+		color: #4E4E4E
+		margin-top: 1rem
+		margin-bottom: 4rem
+
+	&__input
+		background: #FFFFFF
+		border: 1px solid #E5E5E5
+		box-sizing: border-box
+		border-radius: 5px
+		padding: 1.5rem 0 1.5rem 1.9rem
+		font-size: 1.6rem
+		color: #333333
+		width: 100%
+		&::placeholder
+			color: rgba(0, 0, 0, 0.5)
+
+	&__button
+		margin-top: 3rem

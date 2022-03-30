@@ -24,7 +24,7 @@ include ../_mixins
 					img(src="/assets/img/logo-dark.svg")
 
 				.invite__button
-					.button.button_xl записаться на просмотр производства
+					.button.button_xl(data-fancybox="" data-src="#invite_modal") записаться на просмотр производства
 					.invite__under-button для руководителей
 
 		.invite__photos
@@ -37,3 +37,21 @@ include ../_mixins
 			.invite__photo
 				+assets_img('invite-photo-3', 'jpg')
 				.invite__photo-text Раскрой
+
+	.modal.modal_form.invite-modal#invite_modal
+		.title-block
+			.title-block__title.modal__title Записаться на просмотр производства
+			.modal__subtitle Позвоним, чтобы записать вас<br>на просмотр в удобное время
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Записаться на просмотр производства")
+
+			.modal__phone-form.modal__phone-form_small-mt
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 Записаться на просмотр
+
+			.modal__form-pk Нажимая на кнопку, вы соглашаетесь с&#32;
+				a(href="/policy/") политикой конфиденциальности

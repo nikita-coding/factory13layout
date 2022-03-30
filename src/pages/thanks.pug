@@ -1,0 +1,45 @@
+extends common/layout
+include ./_mixins
+
+block variables
+	- var title = 'Благодарю за доверие'
+
+block content
+	include ./common/header-thanks
+
+	.thanks
+		.container
+			.thanks__flex
+				.thanks__left
+					.title-block.title-block_left
+						.title-block__title.thanks__title Благодарю за доверие
+						.title-block__subtitle.thanks__subtitle Мы получили ваше обращение
+
+					.thanks__text
+						div
+							strong Менеджер свяжется с вами в течение рабочего дня —
+						div с понедельника по пятницу с 9:00 до 17:30
+						div по вашему номеру телефона: %+7 (914) 911-23-12%
+						br
+						div Если вы хотите назначить время звонка или у вас есть вопросы, напишите мне лично в WhatsApp по кнопке ниже.
+
+					a.thanks__whatsapp(href="https://api.whatsapp.com/send?phone=79000386613" target="_blank")
+						img(src="/assets/img/whatsapp-icon.svg")
+
+					.thanks__phone-error(data-fancybox="dialog" data-src="#fix_phone_modal") Ошиблись с номером телефона?
+
+
+				.thanks__right
+					+assets_img("thanks-dir", "png")
+
+	.modal.fix-phone-modal#fix_phone_modal
+		.fix-phone-modal__title Напишите корректный номер телефона
+		.fix-phone-modal__subtitle Проверьте, точно ли теперь правильно
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Исправление номера телефона с +7 000...")
+
+			input.js-phone.fix-phone-modal__input.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__")
+
+			.fix-phone-modal__button
+				button.button.button_xl.button_w100 Да, это верный номер

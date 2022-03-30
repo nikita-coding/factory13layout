@@ -80,4 +80,25 @@
 							.compare__table-text= item.text
 
 		.compare__button
-			.button.button_xl Узнать загруженность
+			.button.button_xl(data-fancybox="" data-src="#compare_modal") Узнать загруженность
+
+.modal.modal_form.compare-modal#compare_modal
+	.title-block
+		.title-block__title.modal__title Узнать загруженность
+		.modal__subtitle
+			div Оставьте свой номер.
+			div Наш менеджер перезвонит вам, расскажет о загруженности
+			div и сориентирует по срокам вашего заказа
+
+	form(action="/thanks/" method="post")
+		input(type="hidden" name="form-name" value="Узнать загруженность")
+
+		.modal__phone-form
+			.form-group
+				input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+
+			.modal__button
+				button.button.button_xl.button_w100 Узнать загруженность
+
+		.modal__form-pk Нажимая на кнопку, вы соглашаетесь с&#32;
+			a(href="/policy/") политикой конфиденциальности
