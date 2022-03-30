@@ -7,6 +7,11 @@ Fancybox.defaults.dragToClose = false;
 
 jQuery(document).ready(($) => {
     $(".js-phone").mask("+7 (999) 999-99-99");
+
+    $(".faq__question").click(function(e) {
+        $(this).toggleClass("faq__question_active")
+        $(this).siblings(".faq__answer").slideToggle();
+    });
 });
 
 document.querySelectorAll("[data-scroll]").forEach(item => {

@@ -1,0 +1,89 @@
+.stored-product
+	padding: 15.4rem 0 7rem
+	&__flex
+		display: flex
+		justify-content: space-between
+
+	&__left
+		max-width: 46rem
+		padding-top: 5.5rem
+
+	&__lock
+		margin-top: 9rem
+		position: relative
+		text-align: center
+		max-width: 22.8rem
+		transform: translateX(-.8rem)
+
+		&:before
+			content: ""
+			position: absolute
+			width: 57rem
+			height: 21.7rem
+			background: #233230
+			mix-blend-mode: screen
+			filter: blur(150px)
+			border-radius: 100%
+			z-index: 1
+			left: -5rem
+			top: 0
+			bottom: 0
+			margin: auto
+
+		img
+			z-index: 2
+			position: relative
+
+	&__lock-text
+		z-index: 2
+		position: relative
+		margin-top: 2rem
+		font-size: 16px
+		line-height: 1.1875
+		text-align: center
+		color: #99A0A9
+
+	&__right
+		position: relative
+		z-index: 3
+		max-width: 61.4rem
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-column-gap: 1.35rem
+		grid-row-gap: 1.45rem
+
+	&__item
+		width: 30rem
+		min-height: 30rem
+		background: #35504C
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15)
+		border-radius: .5rem
+		padding: 4.5rem 3rem 1rem 4rem
+		box-sizing: border-box
+		position: relative
+
+		&:before
+			content: ""
+			position: absolute
+			z-index: 1
+			width: 21.7rem
+			height: 21.7rem
+			background: #334845
+			mix-blend-mode: screen
+			filter: blur(150px)
+			border-radius: 100%
+			bottom: .8rem
+			right: .8rem
+
+		img
+			position: absolute
+			bottom: 2rem
+			right: 2rem
+			z-index: 2
+
+	&__item-text
+		font-size: 18px
+		line-height: 1.166
+		color: #EFEFEF
+		z-index: 2
+		position: relative
