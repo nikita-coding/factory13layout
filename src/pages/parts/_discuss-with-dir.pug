@@ -9,10 +9,28 @@
 						.text-gold лично с&nbsp;директором?
 				.discuss-with-dir__coffee Приходите в офис на чашечку кофе
 				.discuss-with-dir__button
-					.button.button_xl Записаться на встречу с&nbsp;директором
+					.button.button_xl(data-fancybox="" data-src="#dir_modal") Записаться на встречу с&nbsp;директором
 					.discuss-with-dir__under-button для руководителей
 
 			.discuss-with-dir__right
 				+assets_img("discuss-with-dir", "jpg")
 				.discuss-with-dir__name Кочнев Илья Дмитриевич
 				.discuss-with-dir__who Директор
+
+	.modal.modal_form.dir-modal#dir_modal
+		.title-block
+			.title-block__title.modal__title Записаться<br>на&nbsp;личную встречу с директором
+			.modal__subtitle Позвоним, чтобы записать вас<br>на встречу с директором
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Записаться на встречу с директором")
+
+			.modal__phone-form
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 записаться на встречу с директором
+
+			.modal__form-pk Нажимая на кнопку, вы соглашаетесь с&#32;
+				a(href="/policy/") политикой конфиденциальности

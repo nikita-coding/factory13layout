@@ -1,7 +1,7 @@
 <template lang="pug">
 	.container
 		include ../../pages/_mixins
-		form(action="/thanks/" method="post")
+		form(action="/thanks/" method="post" enctype="multipart/form-data")
 			input(type="hidden" name="form-name" value="Квиз")
 
 			.quiz-section__header
@@ -36,36 +36,39 @@
 						:class="{ 'quiz__step_done' : stepsItem <= step }"
 						) {{ stepsItem }}
 
-				.quiz__left(v-if="!form")
-					.quiz__step-question.quiz__step-question_1(v-if="step === 1")
+				.quiz__left(v-show="!form")
+					.quiz__step-question.quiz__step-question_1(v-show="step === 1")
 						.quiz__title Приложите эскиз от руки или&nbsp;модель в программе «Базис»
 
-						.quiz__file
-							.quiz__file-plus
+						label.quiz__file(for="quiz_file_input")
+							input.hidden(type="file" name="file" id="quiz_file_input" @change="processFile($event)")
+							.quiz__file-plus(v-if="!file")
 								.quiz__file-plus-icon +
-							.quiz__file-label Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
+							.quiz__file-doc(v-else)
+							.quiz__file-label(v-if="!file") Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
+							.quiz__file-label(v-else) {{ file }}
 
-					.quiz__step-question.quiz__step-question_2(v-if="step === 2")
+					.quiz__step-question.quiz__step-question_2(v-show="step === 2")
 						.quiz__title Какой ЛДСП будет использоваться?
 
 						.quiz__arrow.quiz__arrow_2
 
 						.quiz__select-items
 							.quiz__select-item(v-for="(item, key) in ldspItems")
-								input(:id="'ldsp_item_'+key" type="radio" name="radio" :value="item" v-model="ldspSelected")
+								input(:id="'ldsp_item_'+key" type="radio" name="ldsp" :value="item" v-model="ldspSelected")
 								label(:for="'ldsp_item_'+key") {{ item }}
 
-					.quiz__step-question.quiz__step-question_3(v-if="step === 3")
+					.quiz__step-question.quiz__step-question_3(v-show="step === 3")
 						.quiz__title Вам нужна надежная упаковка?
 
 						.quiz__arrow.quiz__arrow_3
 
 						.quiz__select-items2
 							.quiz__select-item2
-								input(id="pack1" type="radio" name="radio" value="Да" checked)
+								input(id="pack1" type="radio" name="pack" value="Да" checked)
 								label(for="pack1") Да
 							.quiz__select-item2
-								input(id="pack2" type="radio" name="radio" value="Нет")
+								input(id="pack2" type="radio" name="pack" value="Нет")
 								label(for="pack2") Нет
 
 						.quiz__pack-details.quiz__text
@@ -77,10 +80,10 @@
 
 					.quiz__buttons(:class="'quiz__buttons_step-' + step")
 						.button.quiz__back-button.button_faded(@click="prevStep" v-if="step > 1") Назад
-						.button(@click="nextStep" v-if="step === 1 && !files.length") У меня нет
-						.button(@click="nextStep" v-if="step !== 1 || (step === 1 && files.length)") Дальше
+						.button(@click="nextStep" v-if="step === 1 && !file") У меня нет
+						.button(@click="nextStep" v-if="step !== 1 || (step === 1 && file)") Далее
 
-				.quiz__left(v-else)
+				.quiz__left(v-show="form")
 					.quiz__step-question.quiz__step-question_form
 						.quiz__title Мы уже начали считать
 
@@ -91,16 +94,16 @@
 							div
 								.text-gold За номером будет закреплена стоимость и спец. условия.
 
-						input.quiz__phone-input(name="phone" placeholder="Ваш номер телефона")
+						input.quiz__phone-input.js-phone(type="text" name="phone" placeholder="Ваш номер телефона" required)
 
 						.quiz__submit-button
-							.button.button_xl Получить расчет + сроки
+							button.button.button_xl.button_w100 Получить расчет + сроки
 
 						.quiz__select-item.quiz__select-item_checkbox.quiz__pk
 							input(id="quiz_pk" type="checkbox" name="checkbox" value="pk" checked)
 							label(for="quiz_pk")
 								div Нажимая на кнопку, вы соглашаетесь c&nbsp;
-									a(href="#") политикой конфиденциальности
+									a(href="/policy/" target="_blank") политикой конфиденциальности
 
 				.quiz__vertical-separator
 				.quiz__right
@@ -123,7 +126,6 @@ export default {
 	data: () => ({
 		step: 1,
 		steps: [1, 2, 3],
-		files: [],
 		ldspItems: [
 			"Эггер",
 			"Ламарти",
@@ -135,6 +137,7 @@ export default {
 		],
 		ldspSelected: "Эггер",
 		form: false,
+		file: null,
 	}),
 	methods: {
 		nextStep() {
@@ -144,6 +147,9 @@ export default {
 		prevStep() {
 			if(this.step > 1) this.step--;
 		},
-	}
+		processFile(event) {
+			this.file = event.target.files[0].name;
+		}
+	},
 }
 </script>
