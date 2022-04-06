@@ -20,6 +20,7 @@
 							br
 							strong Основатель компании
 
+
 					.quiz-section__photo(v-if="step === 3 && !form")
 						+assets_img("quiz-3-photo", "jpg")
 						.quiz-section__photo-description Так выглядит упаковка вашего заказа
@@ -37,45 +38,48 @@
 						) {{ stepsItem }}
 
 				.quiz__left(v-show="!form")
-					.quiz__step-question.quiz__step-question_1(v-show="step === 1")
-						.quiz__title Приложите эскиз от руки или&nbsp;модель в программе «Базис»
+					transition(name="fade")
+						.quiz__step-question.quiz__step-question_1(v-show="step === 1")
+							.quiz__title Приложите эскиз от руки или&nbsp;модель в программе «Базис»
 
-						label.file-project-input.quiz__file(for="quiz_file_input")
-							input.hidden(type="file" name="file" id="quiz_file_input" @change="processFile($event)")
-							.file-project-input__file-plus(v-if="!file")
-								.file-project-input__file-plus-icon +
-							.file-project-input__file-doc(v-else)
-							.file-project-input__file-label(v-if="!file") Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
-							.file-project-input__file-label(v-else) {{ file }}
+							label.file-project-input.quiz__file(for="quiz_file_input")
+								input.hidden(type="file" name="file" id="quiz_file_input" @change="processFile($event)")
+								.file-project-input__file-plus(v-if="!file")
+									.file-project-input__file-plus-icon +
+								.file-project-input__file-doc(v-else)
+								.file-project-input__file-label(v-if="!file") Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
+								.file-project-input__file-label(v-else) {{ file }}
 
-					.quiz__step-question.quiz__step-question_2(v-show="step === 2")
-						.quiz__title Какой ЛДСП будет использоваться?
+					transition(name="fade")
+						.quiz__step-question.quiz__step-question_2(v-show="step === 2")
+							.quiz__title Какой ЛДСП будет использоваться?
 
-						.quiz__arrow.quiz__arrow_2
+							.quiz__arrow.quiz__arrow_2
 
-						.quiz__select-items
-							.quiz__select-item(v-for="(item, key) in ldspItems")
-								input(:id="'ldsp_item_'+key" type="radio" name="ldsp" :value="item" v-model="ldspSelected")
-								label(:for="'ldsp_item_'+key") {{ item }}
+							.quiz__select-items
+								.quiz__select-item(v-for="(item, key) in ldspItems")
+									input(:id="'ldsp_item_'+key" type="radio" name="ldsp" :value="item" v-model="ldspSelected")
+									label(:for="'ldsp_item_'+key") {{ item }}
 
-					.quiz__step-question.quiz__step-question_3(v-show="step === 3")
-						.quiz__title Вам нужна надежная упаковка?
+					transition(name="fade")
+						.quiz__step-question.quiz__step-question_3(v-show="step === 3")
+							.quiz__title Вам нужна надежная упаковка?
 
-						.quiz__arrow.quiz__arrow_3
+							.quiz__arrow.quiz__arrow_3
 
-						.quiz__select-items2
-							.quiz__select-item2
-								input(id="pack1" type="radio" name="pack" value="Да" checked)
-								label(for="pack1") Да
-							.quiz__select-item2
-								input(id="pack2" type="radio" name="pack" value="Нет")
-								label(for="pack2") Нет
+							.quiz__select-items2
+								.quiz__select-item2
+									input(id="pack1" type="radio" name="pack" value="Да" checked)
+									label(for="pack1") Да
+								.quiz__select-item2
+									input(id="pack2" type="radio" name="pack" value="Нет")
+									label(for="pack2") Нет
 
-						.quiz__pack-details.quiz__text
-							div Трехслойный гофрокартон + обрезки ЛДСП.
-							div Чтобы детали не ездили и не скользили в упаковке, их обкладывают.
-							div
-								.text-gold Тогда изделия приедут в целости и сохранности.
+							.quiz__pack-details.quiz__text
+								div Трехслойный гофрокартон + обрезки ЛДСП.
+								div Чтобы детали не ездили и не скользили в упаковке, их обкладывают.
+								div
+									.text-gold Тогда изделия приедут в целости и сохранности.
 
 
 					.quiz__buttons(:class="'quiz__buttons_step-' + step")
@@ -83,27 +87,28 @@
 						.button(@click="nextStep" v-if="step === 1 && !file") У меня нет
 						.button(@click="nextStep" v-if="step !== 1 || (step === 1 && file)") Далее
 
-				.quiz__left(v-show="form")
-					.quiz__step-question.quiz__step-question_form
-						.quiz__title Мы уже начали считать
+				transition(name="fade")
+					.quiz__left(v-show="form")
+						.quiz__step-question.quiz__step-question_form
+							.quiz__title Мы уже начали считать
 
-						.quiz__arrow.quiz__arrow_form
+							.quiz__arrow.quiz__arrow_form
 
-						.quiz__text.quiz__form-text
-							div Просто оставьте свой номер, чтобы мы смогли отправить расчет стоимости и сроков.
-							div
-								.text-gold За номером будет закреплена стоимость и спец. условия.
+							.quiz__text.quiz__form-text
+								div Просто оставьте свой номер, чтобы мы смогли отправить расчет стоимости и сроков.
+								div
+									.text-gold За номером будет закреплена стоимость и спец. условия.
 
-						input.quiz__phone-input.js-phone(type="text" name="phone" placeholder="Ваш номер телефона" required)
+							input.quiz__phone-input.js-phone(type="text" name="phone" placeholder="Ваш номер телефона" required)
 
-						.quiz__submit-button
-							button.button.button_xl.button_w100 Получить расчет + сроки
+							.quiz__submit-button
+								button.button.button_xl.button_w100 Получить расчет + сроки
 
-						.quiz__select-item.quiz__select-item_checkbox.quiz__pk
-							input(id="quiz_pk" type="checkbox" name="checkbox" value="pk" checked)
-							label(for="quiz_pk")
-								div Нажимая на кнопку, вы соглашаетесь c&nbsp;
-									a(href="/policy/" target="_blank") политикой конфиденциальности
+							.quiz__select-item.quiz__select-item_checkbox.quiz__pk
+								input(id="quiz_pk" type="checkbox" name="checkbox" value="pk" checked)
+								label(for="quiz_pk")
+									div Нажимая на кнопку, вы соглашаетесь c&nbsp;
+										a(href="/policy/" target="_blank") политикой конфиденциальности
 
 				.quiz__vertical-separator
 				.quiz__right

@@ -19,9 +19,9 @@ jQuery(document).ready(($) => {
     });
 
     $("#project_file_input").change(function (e) {
-        $(this).siblings(".project-modal__file-plus").hide();
-        $(this).siblings(".project-modal__file-doc").show();
-        $(this).siblings(".project-modal__file-label").text($(this).val().replace(/C:\\fakepath\\/i, ''));
+        $(this).siblings(".file-project-input__file-plus").hide();
+        $(this).siblings(".file-project-input__file-doc").show();
+        $(this).siblings(".file-project-input__file-label").text($(this).val().replace(/C:\\fakepath\\/i, ''));
     });
 });
 

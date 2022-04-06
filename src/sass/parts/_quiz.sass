@@ -89,15 +89,6 @@
 		box-sizing: border-box
 		left: 4.5rem
 
-		//&_step-1
-			margin-top: 7.8rem
-
-		//&_step-2
-			margin-top: 2.8rem
-
-		//&_step-3
-			margin-top: 6.6rem
-
 	&__back-button
 		margin-right: auto
 		padding-left: 2.9rem
@@ -107,7 +98,6 @@
 		width: 2px
 		background: #99A0A9
 		flex-shrink: 0
-		//margin: 1rem 0
 
 	&__right
 		width: 50.2rem
@@ -328,6 +318,9 @@
 		display: block
 		position: absolute
 		background: center center no-repeat
+		opacity: 1
+		transition: .5s ease-out
+		transform: translateX(0)
 
 		&_2
 			left: 47rem
@@ -350,3 +343,23 @@
 			width: 20.9rem
 			height: 10.4rem
 			background-image: url("data:image/svg+xml,%3Csvg width='209' height='104' viewBox='0 0 209 104' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M208.342 0.0432596L207.839 5.79487L203.11 2.48405L208.342 0.0432596ZM0.959946 102.54C64.6213 103.142 155.733 72.6026 205.357 3.43554L206.169 4.01848C156.309 73.5148 64.8487 104.145 0.950486 103.54L0.959946 102.54Z' fill='url(%23paint0_linear_0_1260)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_0_1260' x1='-13.4734' y1='86.4217' x2='257.706' y2='-37.2089' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23D5B07A' stop-opacity='0'/%3E%3Cstop offset='0.494792' stop-color='%23F0DBB7'/%3E%3Cstop offset='1' stop-color='%23D5B07A' stop-opacity='0'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+
+.fade-enter-active, .fade-leave-active
+	transition: .5s ease-out
+
+	&:not(.quiz__left)
+		position: absolute
+
+	.quiz__arrow
+		transform: translateX(-1rem)
+		opacity: 0
+		transition: 0s ease-out
+
+.fade-enter, .fade-leave-to
+	opacity: 0
+
+.fade-enter
+	transform: translateX(1rem)
+
+.fade-leave-to
+	transform: translateX(-1rem)
