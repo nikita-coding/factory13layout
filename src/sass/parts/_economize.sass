@@ -1,0 +1,100 @@
+.economize
+	background: url("../img/economize-bg.webp") center center
+	background-size: cover
+	margin-top: 20rem
+	padding: 0 0 22.5rem
+
+	&__title-panel
+		top: -15rem
+		width: 100%
+		max-width: 129.6rem
+		padding: 7.4rem 0 8.3rem
+		position: relative
+
+		&:before
+			position: absolute
+			content: ""
+			top: -5rem
+			left: 0
+			right: 0
+			margin: auto
+			width: 73.3rem
+			height: 11rem
+			background: #233230
+			mix-blend-mode: normal
+			opacity: 0.1
+			filter: blur(100px)
+			transform: rotate(-180deg)
+			z-index: 1
+
+		&:after
+			content: ""
+			background: linear-gradient(180deg, #F9FAFE 0%, #F0F3FA 100%)
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			z-index: 2
+			border-radius: 36px
+
+		& > *
+			z-index: 3
+			position: relative
+
+	&__title
+		padding-bottom: .9rem
+
+	&__subtitle
+		padding-top: .7rem
+		max-width: 41rem
+		font-size: 1.6rem
+
+	&__title-accent
+		display: inline-block
+		background: #2B403D
+		padding: 0.1rem 0.5rem
+		border-radius: .5rem
+		color: #EDEDED
+
+	&__items
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-column-gap: 4rem
+		grid-row-gap: 4rem
+		margin-top: 6.7rem
+
+	&__item
+		position: relative
+		max-width: 36rem
+		width: 100%
+		box-sizing: border-box
+		height: 29.2rem
+		padding: 5.5rem 1.7rem 5rem 3rem
+		background: url("data:image/svg+xml,%3Csvg width='360' height='292' viewBox='0 0 360 292' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M151.768 23.4712H36C16.1178 23.4712 0 39.5889 0 59.4712V255.697C0 275.579 16.1178 291.697 36 291.697H324C343.882 291.697 360 275.579 360 255.697V59.4712C360 39.5889 343.882 23.4712 324 23.4712H208.232C208.232 39.0632 195.592 51.703 180 51.703C164.408 51.703 151.768 39.0632 151.768 23.4712Z' fill='url(%23paint0_linear_108_34)'/%3E%3Cpath d='M174.348 15.6079H174.535V31.0196C174.535 32.0866 174.699 32.868 175.029 33.3661C175.357 33.8642 175.921 34.1127 176.722 34.1127V34.2723H168.109V34.1127C168.696 34.1127 169.149 33.9924 169.469 33.7529C169.789 33.5134 170.002 33.1839 170.108 32.7668C170.215 32.3497 170.268 31.7672 170.268 31.0207V29.5545V21.395C170.268 19.1733 169.672 18.0174 168.482 17.9286V17.7419L174.348 15.6079Z' fill='%23C7B299'/%3E%3Cpath d='M178.988 15.6079H191.52V15.7946L185.067 22.9399C186.009 22.9399 186.875 23.0647 187.667 23.3132C188.457 23.5628 189.107 23.8866 189.613 24.2869C190.12 24.6871 190.551 25.1268 190.906 25.6069C191.261 26.087 191.514 26.5491 191.666 26.9932C191.817 27.4373 191.893 27.8466 191.893 28.2199C191.893 29.0193 191.747 29.7839 191.454 30.5125C191.16 31.241 190.72 31.9078 190.134 32.5127C189.547 33.1176 188.756 33.5921 187.76 33.9395C186.764 34.2858 185.618 34.459 184.321 34.459C183.698 34.459 183.183 34.4455 182.775 34.4185C182.365 34.3915 181.801 34.2723 181.081 34.0587C180.362 33.8451 179.743 33.5258 179.228 33.0985C178.5 32.5116 178.033 31.7695 177.829 30.8723C177.624 29.975 177.74 29.1261 178.175 28.3256C178.61 27.525 179.308 26.9921 180.268 26.7256C180.855 26.5659 181.429 26.6188 181.988 26.8853C182.547 27.1517 182.934 27.543 183.148 28.058C183.361 28.5741 183.353 29.1688 183.121 29.8446C182.659 29.5781 182.21 29.5826 181.774 29.8581C181.338 30.1336 181.121 30.6181 181.121 31.3108C181.121 32.271 181.405 33.0085 181.974 33.5235C182.543 34.0396 183.147 34.2971 183.788 34.2971C184.908 34.2971 185.8 33.7236 186.467 32.5768C187.134 31.4299 187.467 29.9773 187.467 28.2176C187.467 27.7915 187.404 27.3553 187.28 26.9111C187.155 26.467 186.964 26.0274 186.706 25.5911C186.449 25.156 186.071 24.7962 185.573 24.5117C185.075 24.2273 184.506 24.0856 183.866 24.0856V23.9259L188.319 18.9664H183.493C181.786 18.9664 180.569 19.216 179.84 19.713C179.111 20.211 178.684 21.0195 178.56 22.1393L178.401 22.0865L178.988 15.6079Z' fill='%23C7B299'/%3E%3Cpath d='M158.56 24.9397C158.56 13.0989 168.159 3.50004 180 3.50004C191.841 3.50004 201.439 13.0989 201.439 24.9397C201.439 36.7805 191.841 46.3794 180 46.3794C168.159 46.3794 158.56 36.7805 158.56 24.9397Z' stroke='%23EEEEEE' stroke-opacity='0.5'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_108_34' x1='180' y1='23.4712' x2='180' y2='291.697' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F9FAFE'/%3E%3Cstop offset='1' stop-color='%23F0F3FA'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A") top center no-repeat
+
+
+		& > *
+			z-index: 3
+			position: relative
+
+
+	&__item-title
+		font-weight: 500
+		font: 3rem 'Playfair Display'
+		line-height: 1.3
+		color: #333333
+
+	&__item-text
+		margin-top: 2.3rem
+		font-size: 1.6rem
+		line-height: 150%
+		color: #4E4E4E
+		font-weight: 400
+
+	&__bold
+		font-weight: 700
+		display: inline
+
+.no-webp .economize
+	background-image: url("../img/economize-bg.png")

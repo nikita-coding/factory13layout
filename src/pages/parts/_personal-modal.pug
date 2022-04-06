@@ -1,0 +1,47 @@
+.modal.personal-modal#modal_to_manager
+	.personal-modal__left
+		.title-block.title-block_left
+			.title-block__title.project-modal__title Задать вопрос менеджеру
+			.personal-modal__subtitle Менеджер перезвонит вам и ответит на вопрос
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Задать вопрос менеджеру")
+
+			textarea.text-input.modal__textarea.personal-modal__textarea(placeholder="Что вы хотели бы спросить?" name="message" required="")
+
+			.modal__phone-form.personal-modal__form
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="Ваш номер телефона" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 Спросить
+
+	.personal-modal__photo
+		+assets_img("personal-modal-manager", "png")
+
+	.modal__form-pk.personal-modal__pk Нажимая на кнопку, вы соглашаетесь с&#32;
+		a(href="/policy/") политикой конфиденциальности
+
+.modal.personal-modal#modal_to_dir
+	.personal-modal__left
+		.title-block.title-block_left
+			.title-block__title.project-modal__title Задать вопрос директору
+			.personal-modal__subtitle Илья Дмитриевич перезвонит вам и ответит на вопрос
+
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Задать вопрос директору")
+			textarea.text-input.modal__textarea.personal-modal__textarea(placeholder="Что вы хотели бы спросить?" name="message" required="")
+
+			.modal__phone-form.personal-modal__form
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="Ваш номер телефона" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 Спросить
+
+	.personal-modal__photo
+		+assets_img("personal-modal-dir", "png")
+
+	.modal__form-pk.personal-modal__pk Нажимая на кнопку, вы соглашаетесь с&#32;
+		a(href="/policy/") политикой конфиденциальности

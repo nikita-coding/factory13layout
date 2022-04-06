@@ -1,0 +1,102 @@
+.deadlines-why
+	padding: 15.9rem 0 14.4rem
+	position: relative
+
+	&:before
+		content: ""
+		position: absolute
+		width: 9.6rem
+		height: .4rem
+		background: #C7B299
+		top: 0
+		left: 0
+		right: 0
+		margin: auto
+		z-index: 1
+
+	& > *
+		z-index: 2
+		position: relative
+
+	&__gradient
+		position: absolute
+		width: 79.3rem
+		height: 39.3rem
+		border-radius: 100%
+		background: #233230
+		mix-blend-mode: screen
+		filter: blur(150px)
+		top: 9.8rem
+		left: 0
+		right: 0
+		bottom: auto
+		margin: auto
+		z-index: 1
+
+
+	&__title-block
+		max-width: 61rem
+		margin: auto
+		position: relative
+
+		&:before, &:after
+			content: ""
+			position: absolute
+			width: 3.8rem
+			height: 3.6rem
+			background: url("data:image/svg+xml,%3Csvg width='38' height='36' viewBox='0 0 38 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.9398 24.5912L25.1229 4.12393C23.9156 2.03135 21.6647 0.731445 19.25 0.731445C16.8356 0.731445 14.5853 2.03107 13.3772 4.12281L1.41374 24.8432C0.205835 26.9343 0.205835 29.5322 1.41374 31.6234C2.62165 33.7154 4.87221 35.0156 7.28663 35.0156H31.2169L31.275 35.0148C34.9833 34.9852 38.0005 31.9439 38.0005 28.2345C38.0008 26.939 37.634 25.6796 36.9394 24.5912L36.9398 24.5912ZM31.2343 33.2661L31.2178 34.1409V33.2661H7.28681C5.49496 33.2661 3.82561 32.3014 2.92832 30.7484C2.03271 29.1968 2.03271 27.2697 2.92914 25.7184L14.8918 4.99801C15.7883 3.44554 17.4583 2.48115 19.2501 2.48115C21.0418 2.48115 22.7118 3.44582 23.6077 4.99878L35.4351 25.4835L35.457 25.5189C35.9774 26.3291 36.2521 27.2677 36.2521 28.2345C36.2521 30.9866 34.0136 33.2435 31.2344 33.266L31.2343 33.2661ZM19.2547 22.191C20.1805 22.191 21.1983 21.5016 21.2594 20.2196L21.6787 10.4116C21.6787 9.07519 20.5911 7.98816 19.2545 7.98816C17.9179 7.98816 16.8302 9.07554 16.8311 10.4453L17.2502 20.2266C17.3211 21.584 18.3082 22.1913 19.2548 22.1913L19.2547 22.191ZM19.2547 9.55872C19.725 9.55872 20.1085 9.94162 20.1093 10.3777L19.6908 20.1485C19.67 20.5862 19.3523 20.6204 19.2553 20.6204C18.9518 20.6204 18.8379 20.4964 18.8198 20.1524L18.4021 10.411C18.401 9.94097 18.7845 9.55834 19.2548 9.55834L19.2547 9.55872ZM19.2547 23.9615C18.5024 23.9615 17.7604 24.2685 17.2161 24.8073C16.6818 25.3422 16.375 26.0833 16.375 26.8412C16.375 27.6021 16.6818 28.3452 17.2192 28.8825C17.7579 29.4153 18.4996 29.7212 19.2547 29.7212C20.0121 29.7212 20.7532 29.4144 21.2857 28.8828C21.8252 28.3495 22.1344 27.6051 22.1344 26.8409C22.1344 26.08 21.8249 25.3376 21.2884 24.8061C20.7508 24.2693 20.0093 23.9614 19.2547 23.9614V23.9615ZM20.1786 27.7689C19.6922 28.2551 18.8149 28.2515 18.3268 27.7692C18.0844 27.5268 17.9455 27.1886 17.9455 26.8413C17.9455 26.497 18.0844 26.1601 18.3238 25.9204C18.5736 25.6734 18.9127 25.532 19.2547 25.532C19.5913 25.532 19.9365 25.6761 20.181 25.9204C20.424 26.1612 20.564 26.497 20.564 26.8413C20.564 27.1889 20.4245 27.5257 20.1786 27.7689L20.1786 27.7689Z' fill='%23EFEFEF'/%3E%3C/svg%3E%0A") center center no-repeat
+			bottom: 7.8rem
+
+		&:before
+			left: -5.4rem
+
+		&:after
+			right: -5.4rem
+
+	&__title
+		padding-bottom: 1.3rem
+
+	&__subtitle
+		padding-top: 1.2rem
+		line-height: 1.5
+		font-weight: 400
+		font-size: 1.6rem
+
+	&__items
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-column-gap: 4rem
+		grid-row-gap: 4rem
+		margin-top: 10.2rem
+
+	&__item
+		padding: 5rem
+		box-sizing: border-box
+		border: 1px solid #50625C
+
+	&__item-img
+		height: 5.5rem
+
+	&__item-title
+		font-weight: 500
+		font: 2.8rem 'Playfair Display'
+		line-height: 1.39
+		color: #EFEFEF
+		min-height: 8.6rem
+		margin-top: 1.1rem
+
+	&__item-text
+		margin-top: 2rem
+		font-size: 1.6rem
+		line-height: 150%
+		color: #EFEFEF
+
+	&__button
+		max-width: 35.5rem
+		margin: 14.2rem auto 0
+
+	&__under-button
+		margin-top: 1rem
+		font-size: 1.6rem
+		text-align: center
+		color: #6D867E

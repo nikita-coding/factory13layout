@@ -12,6 +12,17 @@ jQuery(document).ready(($) => {
         $(this).toggleClass("faq__question_active")
         $(this).siblings(".faq__answer").slideToggle();
     });
+
+    $(".history__read-more").click(function () {
+        $(this).fadeOut(50);
+        $(".history__more-text").slideDown(200);
+    });
+
+    $("#project_file_input").change(function (e) {
+        $(this).siblings(".project-modal__file-plus").hide();
+        $(this).siblings(".project-modal__file-doc").show();
+        $(this).siblings(".project-modal__file-label").text($(this).val().replace(/C:\\fakepath\\/i, ''));
+    });
 });
 
 document.querySelectorAll("[data-scroll]").forEach(item => {

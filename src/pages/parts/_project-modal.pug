@@ -1,0 +1,24 @@
+.modal.modal_form.project-modal#project_modal
+	.title-block.title-block_left
+		.title-block__title.project-modal__title Отправить проект
+		.project-modal__subtitle Приложите эскиз от руки или модель в программе «Базис»
+
+	form(action="/thanks/" method="post")
+		input(type="hidden" name="form-name" value="Отправить проект")
+
+		label.file-project-input.project-modal__file(for="project_file_input")
+			input.hidden(type="file" name="file" id="project_file_input")
+			.file-project-input__file-plus
+				.file-project-input__file-plus-icon +
+			.file-project-input__file-doc(style="display: none;")
+			.file-project-input__file-label Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
+
+		.modal__phone-form.project-modal__form
+			.form-group
+				input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="Ваш номер телефона" required)
+
+			.modal__button
+				button.button.button_xl.button_w100 Перезвоните мне
+
+		.modal__form-pk Позвоним, чтобы сказать стоимость и сроки. Нажимая на кнопку, вы соглашаетесь с&#32;
+			a(href="/policy/") политикой конфиденциальности

@@ -1,0 +1,84 @@
+.something-went-wrong
+	padding: 16.7rem 0 0
+	position: relative
+
+	&:after
+		width: 79.3rem
+		height: 26.4rem
+		background: #233230
+		mix-blend-mode: screen
+		filter: blur(150px)
+		top: 10rem
+		left: 0
+		right: 0
+		margin: auto
+		position: absolute
+		content: ""
+		z-index: 1
+
+	> *
+		position: relative
+		z-index: 2
+
+	&__items
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		grid-column-gap: 6rem
+		grid-row-gap: 6rem
+		margin-top: 10rem
+
+	&__item
+		position: relative
+		padding-top: 12.6rem
+
+		&:before
+			content: ""
+			z-index: 2
+			position: absolute
+			display: block
+			top: 8rem
+			left: -3rem
+			border-radius: 100%
+			width: 10.3rem
+			height: 3.3rem
+			background: #2B403D
+			mix-blend-mode: normal
+			filter: blur(10px)
+
+	&__number
+		font: 9.6rem 'Playfair Display'
+		font-style: normal
+		font-weight: 400
+		line-height: 106.8%
+		text-align: center
+		color: #C7B299
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 1
+
+	&__text
+		position: relative
+		z-index: 3
+		font-size: 1.6rem
+		line-height: 150%
+		color: #EFEFEF
+
+	&__we-care
+		position: relative
+		max-width: 71.1rem
+		margin: -4.7rem auto 0
+		height: 48.1rem
+		background: url("data:image/svg+xml,%3Csvg width='712' height='481' viewBox='0 0 712 481' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='712' height='481' fill='%23E5E5E5'/%3E%3Cg clip-path='url(%23clip0_0_1)'%3E%3Crect width='1920' height='32766' transform='translate(-732 -29772)' fill='white'/%3E%3Crect x='0' y='0' width='712' height='481' fill='%232B403D'/%3E%3Cg style='mix-blend-mode:multiply'%3E%3Crect x='148' y='173.361' width='405.654' height='151' rx='29' fill='%23344946' fill-opacity='0.5'/%3E%3C/g%3E%3Cg style='mix-blend-mode:screen' filter='url(%23filter0_f_0_1)'%3E%3Cellipse cx='355.599' cy='240.36' rx='205.447' ry='89.999' fill='%23233230'/%3E%3C/g%3E%3Cg style='mix-blend-mode:multiply' opacity='0.15'%3E%3Cpath d='M349.584 351.723C347.453 351.723 345.321 351.191 343.19 350.656C258.983 317.079 230.737 254.188 239.793 206.752C246.187 172.644 271.238 150.26 302.684 150.26C317.606 150.26 334.129 155.59 349.583 165.714C365.038 155.59 381.029 150.26 395.952 150.26C427.397 150.26 452.444 172.113 458.842 206.221C467.903 253.121 439.657 316.007 355.977 350.124C354.374 351.723 351.707 351.723 349.576 351.723L349.584 351.723ZM303.216 171.585C281.899 171.585 265.908 186.508 261.11 211.024C253.648 249.93 278.164 301.629 350.116 330.407C421.531 300.561 446.051 248.862 438.585 210.492C433.787 186.508 417.8 171.585 396.479 171.585C384.219 171.585 370.364 176.915 356.509 187.04C352.778 189.703 347.448 189.703 343.717 187.04C329.33 176.915 315.475 171.585 303.215 171.585H303.216Z' fill='%23435F5B'/%3E%3Cpath d='M349.043 114.025C343.181 114.025 338.383 109.227 338.383 103.365V67.6606C338.383 61.7985 343.181 57 349.043 57C354.906 57 359.704 61.7982 359.704 67.6606V103.368C359.704 109.23 354.906 114.025 349.043 114.025Z' fill='%23435F5B'/%3E%3Cpath d='M440.186 132.148C438.587 132.148 436.987 131.616 435.388 131.081C430.058 128.417 427.926 122.02 430.59 116.689L448.712 80.9816C451.375 75.6515 457.772 73.5202 463.103 76.1834C468.433 78.8467 470.564 85.2443 467.901 90.5747L449.779 126.282C447.648 130.017 443.917 132.148 440.187 132.148L440.186 132.148Z' fill='%23435F5B'/%3E%3Cpath d='M257.912 132.146C254.181 132.146 250.45 130.015 248.319 126.284L230.197 90.5767C227.534 85.2466 229.665 78.8529 234.995 76.1854C240.325 73.5221 246.719 75.6535 249.387 80.9836L267.509 116.691C270.172 122.021 268.04 128.415 262.71 131.083C261.111 131.614 259.512 132.146 257.912 132.146L257.912 132.146Z' fill='%23435F5B'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_0_1' x='0.152344' y='0.361328' width='710.894' height='479.998' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='75' result='effect1_foregroundBlur_0_1'/%3E%3C/filter%3E%3CclipPath id='clip0_0_1'%3E%3Crect width='1920' height='32766' fill='white' transform='translate(-732 -29772)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") center center no-repeat
+
+
+
+	&__we-care-text
+		font: 2.4rem 'Playfair Display'
+		font-weight: 500
+		line-height: 1.62
+		text-align: center
+		color: #EFEFEF
+		position: relative
+		z-index: 4
+		padding: 20.5rem 1rem 4rem

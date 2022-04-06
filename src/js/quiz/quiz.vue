@@ -40,13 +40,13 @@
 					.quiz__step-question.quiz__step-question_1(v-show="step === 1")
 						.quiz__title Приложите эскиз от руки или&nbsp;модель в программе «Базис»
 
-						label.quiz__file(for="quiz_file_input")
+						label.file-project-input.quiz__file(for="quiz_file_input")
 							input.hidden(type="file" name="file" id="quiz_file_input" @change="processFile($event)")
-							.quiz__file-plus(v-if="!file")
-								.quiz__file-plus-icon +
-							.quiz__file-doc(v-else)
-							.quiz__file-label(v-if="!file") Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
-							.quiz__file-label(v-else) {{ file }}
+							.file-project-input__file-plus(v-if="!file")
+								.file-project-input__file-plus-icon +
+							.file-project-input__file-doc(v-else)
+							.file-project-input__file-label(v-if="!file") Если у вас только эскиз, наш&nbsp;технолог разработает по&nbsp;нему модель
+							.file-project-input__file-label(v-else) {{ file }}
 
 					.quiz__step-question.quiz__step-question_2(v-show="step === 2")
 						.quiz__title Какой ЛДСП будет использоваться?
