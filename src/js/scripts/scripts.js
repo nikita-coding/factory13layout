@@ -23,6 +23,10 @@ jQuery(document).ready(($) => {
         $(this).siblings(".file-project-input__file-doc").show();
         $(this).siblings(".file-project-input__file-label").text($(this).val().replace(/C:\\fakepath\\/i, ''));
     });
+
+    $("input[name='accept']").each((key, elem) => {
+        $(elem).prop('checked', false);
+    });
 });
 
 document.querySelectorAll("[data-scroll]").forEach(item => {

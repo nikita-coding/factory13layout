@@ -6,6 +6,7 @@
 
 		form(action="/thanks/" method="post")
 			input(type="hidden" name="form-name" value="Задать вопрос менеджеру")
+			input(type="checkbox" name="accept" checked)
 
 			textarea.text-input.modal__textarea.personal-modal__textarea(placeholder="Что вы хотели бы спросить?" name="message" required="")
 
@@ -31,6 +32,7 @@
 
 		form(action="/thanks/" method="post")
 			input(type="hidden" name="form-name" value="Задать вопрос директору")
+			input(type="checkbox" name="accept" checked)
 			textarea.text-input.modal__textarea.personal-modal__textarea(placeholder="Что вы хотели бы спросить?" name="message" required="")
 
 			.modal__phone-form.personal-modal__form

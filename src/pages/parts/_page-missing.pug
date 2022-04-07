@@ -9,7 +9,7 @@
 			.title-block__title.modal__title Какой информации<br>вам не хватило на странице?
 		form(action="/thanks/" method="post")
 			input(type="hidden" name="form-name" value="Какой информации не хватило на странице")
-
+			input(type="checkbox" name="accept" checked)
 			textarea.page-missing__textarea.modal__textarea.text-input(placeholder="Напишите здесь" name="page-missing" required)
 
 			.page-missing__button

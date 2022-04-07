@@ -5,7 +5,7 @@
 
 	form(action="/thanks/" method="post")
 		input(type="hidden" name="form-name" value="Отправить проект")
-
+		input(type="checkbox" name="accept" checked)
 		label.file-project-input.project-modal__file(for="project_file_input")
 			input.hidden(type="file" name="file" id="project_file_input")
 			.file-project-input__file-plus
