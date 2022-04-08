@@ -5,16 +5,17 @@
 			.button.button_xl Сейчас напишу
 
 	.modal.page-missing__modal#page_missing_modal
-		.title-block
-			.title-block__title.modal__title Какой информации<br>вам не хватило на странице?
-		form(action="/thanks/" method="post")
-			input(type="hidden" name="form-name" value="Какой информации не хватило на странице")
-			input(type="checkbox" name="accept" checked)
-			textarea.page-missing__textarea.modal__textarea.text-input(placeholder="Напишите здесь" name="page-missing" required)
+		.page-missing__form
+			.title-block
+				.title-block__title.modal__title Какой информации<br>вам не хватило на странице?
+			form#page_missing_form(action="/thanks/" method="post")
+				input(type="hidden" name="form-name" value="Какой информации не хватило на странице")
+				input(type="checkbox" name="accept" checked)
+				textarea.page-missing__textarea.modal__textarea.text-input(placeholder="Напишите здесь" name="page-missing" required)
 
-			.page-missing__button
-				button.button.button_xl.button_w100 Готово
+				.page-missing__button
+					button.button.button_xl.button_w100 Готово
 
 
-		//.title-block.page-missing__thanks
+		.title-block.page-missing__thanks
 			.title-block__title.modal__title Благодарим за обратную связь<br>Это важно для нас

@@ -23,7 +23,7 @@ block content
 						br
 						div Если вы хотите назначить время звонка или у вас есть вопросы, напишите мне лично в WhatsApp по кнопке ниже.
 
-					a.thanks__whatsapp(href="https://api.whatsapp.com/send?phone=79000386613" target="_blank")
+					.thanks__whatsapp(data-fancybox="" data-src="#whatsapp_modal")
 						img(src="/assets/img/whatsapp-icon.svg")
 
 					.thanks__phone-error(data-fancybox="dialog" data-src="#fix_phone_modal") Ошиблись с номером телефона?
@@ -43,3 +43,5 @@ block content
 
 			.fix-phone-modal__button
 				button.button.button_xl.button_w100 Да, это верный номер
+
+	include ./parts/_whatsapp-modal

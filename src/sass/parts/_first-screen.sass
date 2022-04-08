@@ -1,11 +1,59 @@
 .first-screen
 	height: 74.4rem
 	overflow: hidden
-	background: #282825 url("../img/first-screen-background.webp") top center no-repeat
+	background: #282825 url("../img/first-screen-background.webp") center center no-repeat
+	background-size: cover
 	position: relative
+
+	&__gradient
+		position: absolute
+		z-index: 1
+		border-radius: 100%
+		filter: blur(80px)
+
+		&_1
+			width: 15rem
+			height: 49rem
+			background: linear-gradient(180deg, #F3E1C1 0%, rgba(243, 225, 193, 0) 100%)
+			mix-blend-mode: lighten
+			opacity: 0.5
+			transform: rotate(-29.83deg)
+			top: -12rem
+			left: calc(50% - 65rem)
+
+		&_2
+			width: 15rem
+			height: 49rem
+			background: linear-gradient(180deg, #F3E1C1 0%, rgba(243, 225, 193, 0) 100%)
+			mix-blend-mode: lighten
+			opacity: 0.5
+			transform: rotate(20deg)
+			top: -12rem
+			left: calc(50% + 55rem)
+
+		&_3
+			width: 58rem
+			height: 43rem
+			background: #F3E1C1
+			mix-blend-mode: lighten
+			opacity: 0.15
+			top: 20rem
+			left: calc(50% - 63rem)
+
+
+		&_4
+			width: 30rem
+			height: 48rem
+			background: #F3E1C1
+			mix-blend-mode: lighten
+			opacity: 0.5
+			top: 20rem
+			left: calc(50% + 24rem)
 
 	&__container
 		display: flex
+		position: relative
+		z-index: 2
 
 	&__left
 		max-width: 58rem
@@ -120,7 +168,8 @@
 		width: 100%
 		height: 100%
 		z-index: 1
-		background: rgba(#14304B, .5)
+		opacity: .5
+		background: #010408
 		mix-blend-mode: multiply
 
 	&__message-text
