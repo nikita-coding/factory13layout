@@ -45,6 +45,26 @@ jQuery(document).ready(($) => {
             $(".page-missing__form").hide();
             $(".page-missing__thanks").show();
         });
+    });
+
+    const triggerBookmark = $(".js-bookmark");
+    triggerBookmark.click(function(e) {
+
+        if (window.sidebar && window.sidebar.addPanel) { // Firefox <23
+
+            window.sidebar.addPanel(document.title,window.location.href,'');
+
+        } else if(window.external && ('AddFavorite' in window.external)) { // Internet Explorer
+
+            window.external.AddFavorite(location.href,document.title);
+
+        } else { // Для других браузеров (в основном WebKit) мы используем простое оповещение, чтобы информировать пользователей о том, что они могут добавлять в закладки с помощью ctrl + D / cmd + D
+
+            alert('Вы можете добавить эту страницу в закладки, нажав ' + (navigator.userAgent.toLowerCase().indexOf('mac') != - 1 ? 'Command/Cmd' : 'CTRL') + ' + D на клавиатуре.');
+
+        }
+        // Если у вас есть что-то в `href` вашего триггера
+        return false;
     })
 });
 

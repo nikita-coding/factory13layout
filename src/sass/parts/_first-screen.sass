@@ -1,5 +1,7 @@
 .first-screen
-	height: 74.4rem
+	min-height: 74.4rem
+	height: calc(100vh - 16.4rem - 11.3rem)
+	max-height: 120rem
 	overflow: hidden
 	background: #282825 url("../img/first-screen-background.webp") center center no-repeat
 	background-size: cover
@@ -37,7 +39,7 @@
 			background: #F3E1C1
 			mix-blend-mode: lighten
 			opacity: 0.15
-			top: 20rem
+			bottom: 15rem
 			left: calc(50% - 63rem)
 
 
@@ -47,17 +49,20 @@
 			background: #F3E1C1
 			mix-blend-mode: lighten
 			opacity: 0.5
-			top: 20rem
+			bottom: 15rem
 			left: calc(50% + 24rem)
 
 	&__container
 		display: flex
 		position: relative
 		z-index: 2
+		height: 100%
 
 	&__left
 		max-width: 58rem
-		padding-top: 7.8rem
+		display: flex
+		flex-direction: column
+		justify-content: center
 
 	&__title
 		font: 4.8rem 'Playfair Display'
@@ -150,14 +155,13 @@
 	&__director
 		position: absolute
 		left: 11.9rem
-		top: 1.5rem
+		bottom: 0
 
 	&__message
 		border-radius: 25px 5px 5px 5px
 		overflow: hidden
 		position: absolute
-		top: 40.1rem
-		left: 2.1rem
+		bottom: 22rem
 		width: 25.7rem
 
 
@@ -202,8 +206,8 @@
 		line-height: 1.17214
 		color: #EFEFEF
 		position: absolute
-		top: 54.3rem
 		left: 15.4rem
+		bottom: 16.5rem
 		width: 21rem
 		white-space: nowrap
 
