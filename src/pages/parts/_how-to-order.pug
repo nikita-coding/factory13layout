@@ -4,7 +4,7 @@
 			.title-block__title.how-to-order__title.title-block_left
 				.text-gold Как заказать
 				|  и&nbsp;что будет после?
-			.title-block__separator
+			.title-block__separator.how-to-order__separator
 			.title-block__subtitle.how-to-order__subtitle
 				.text-gold Если вас что-либо не устроило,
 				|  служба заботы искренне и быстро готова вам помочь
@@ -43,12 +43,18 @@
 				.how-to-order__number 5
 				.how-to-order__item-title Упаковка и самовывоз
 				.how-to-order__item-text Забираете надежно упакованный заказ,
-					.text-gold  проверенный вручную на брак.
+					.text-gold  проверенный вручную на&nbsp;брак.
+					| &nbsp;
+					.how-to-order__mob-arrow.mobile-only
 
 			.how-to-order__item.how-to-order__item_picture
 				+assets_img("how-to-order-image", "png")
 				.how-to-order__under-button Готовая продукция уезжает на склад хранения
 
-		.how-to-order__button
+		.how-to-order__button.pc-only
 			.button.button_xl(data-fancybox="" data-src="#project_modal") Отправить проект на расчет
 			.how-to-order__under-button эскиз от руки или модель в программе “Базис”
+
+		.how-to-order__button.mobile-only
+			a.button.button_whatsapp(href="whatsapp://send?phone=79000386613") Оформить заказ в whatsapp
+			.how-to-order__under-button Получите расчет сегодня

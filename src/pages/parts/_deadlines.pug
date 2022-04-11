@@ -1,11 +1,11 @@
 .deadlines
 	.container
 		.title-block
-			.title-block__title
+			.title-block__title.deadlines__title
 				.text-gold На какие сроки
 				div гарантированно рассчитывать?
 
-			.title-block__separator.title-block__separator_lg
+			.title-block__separator.title-block__separator_lg.deadlines__title-separator
 
 			.title-block__subtitle.deadlines__subtitle Точные сроки можем назвать, когда увидим ваш проект на&nbsp;бумаге или в&nbsp;программе Базис
 
@@ -39,9 +39,36 @@
 					img(src="/assets/img/deadlines-3.svg")
 
 		.deadlines__deadline-margin
-			.deadlines__deadline-margin-title Срок берем с запасом
-			.deadlines__deadline-margin-text Если на производстве небольшая загруженность, то можем сделать быстрее. Например, кухню не за 7 дней, а за 2-3 дня.
+			.deadlines__deadline-margin-title Срок берем с&nbsp;запасом
+			.deadlines__deadline-margin-text Если на производстве небольшая загруженность, то&#32;
+				strong можем сделать быстрее.
+				br.mobile-only
+				br.mobile-only
+				|  Например, кухню не за 7 дней, а&nbsp;
+				strong за 2-3 дня.
 
 		.deadlines__button
-			.button.button_xl(data-scroll="#quiz_section") Рассчитать срок изготовления
+			.button.button_xl.pc-only(data-scroll="#quiz_section") Рассчитать срок изготовления
+			.button.button_xl.mobile-only(data-fancybox="" data-src="#calc_deadline_modal") Рассчитать срок изготовления
 			.deadlines__under-button с вашим эскизом или моделью
+
+	.modal.modal_form.calc-price-modal#calc_deadline_modal
+		.title-block
+			.title-block__title.modal__title Рассчитать срок изготовления
+			.modal__subtitle
+				div Оставьте свой номер.
+				br
+				div Наш менеджер сразу же с вами свяжется, уточнит детали заказа и назовет срок изготовления.
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Рассчитать срок изготовления")
+
+			.modal__phone-form
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 Перезвоните мне
+
+			.modal__form-pk Нажимая на кнопку, вы соглашаетесь с&#32;
+				a(href="/policy/" target="_blank") политикой конфиденциальности

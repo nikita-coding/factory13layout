@@ -225,3 +225,84 @@
 		&__message
 			&:after
 				background-image: url('../img/first-screen-message-signature.png')
+
+
+@media screen and (max-width: $mob-width)
+	.first-screen
+		height: unset
+		min-height: unset
+		padding-bottom: 2.3rem
+
+		&__title-wrap
+			position: relative
+			padding: 2.5rem 0.5rem 2rem 2rem
+
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				left: -$container-paddings
+				width: calc(100% + #{$container-paddings * 2})
+				height: 100%
+				background: #010408
+				mix-blend-mode: multiply
+				opacity: 0.5
+				z-index: 1
+
+			> *
+				z-index: 2
+				position: relative
+
+		&__title
+			font-size: 2.4rem
+			margin: 0
+
+		&__subtitle
+			font-size: 1.8rem
+			padding-top: .4rem
+
+		&__prod-mobile
+			font-size: 1.4rem
+			text-transform: uppercase
+			color: #EFEFEF
+			margin-top: 1rem
+
+		&__prod-square-m
+			font-size: 1.4rem
+			text-transform: lowercase
+			margin-left: 0.2rem
+
+		&__prod-square2
+			font: 1.1rem "Berlingske Serif"
+			transform: translateY(-0.5rem)
+
+		&__for
+			padding: 3rem 0 0 2.2rem
+
+			&:before
+				left: -1.7rem
+				top: 3.6rem
+
+		&__for1
+			font-size: 1.2rem
+
+		&__for2
+			font-weight: 300
+			display: inline
+			font-size: 1.2rem
+
+		&__button-wrap
+			margin: 2.4rem auto 0
+			max-width: 26.5rem
+			width: 100%
+
+			.button
+				max-height: 5.2rem
+				font-size: 1.2rem
+
+		&__price-today
+			font-size: 1.2rem
+			margin-top: 0.5rem
+
+		&__right
+			display: none

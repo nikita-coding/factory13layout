@@ -24,9 +24,10 @@ body
 
 .container
 	width: 100%
-	max-width: $container-max-width
+	max-width: calc(#{$container-max-width} + #{$container-paddings})
 	padding: 0 $container-paddings
 	margin: 0 auto
+	box-sizing: border-box
 
 .text-gold
 	display: inline
@@ -34,3 +35,18 @@ body
 
 input[type="checkbox"][name="accept"]
 	display: none!important
+
+@media screen and (min-width: ($mob-width + 1px))
+	.mobile-only
+		display: none!important
+
+@media screen and (max-width: $mob-width)
+	.pc-only
+		display: none!important
+	.page-wrap
+		max-width: 320px
+
+	.container
+		&_mob-full
+			padding-left: 0
+			padding-right: 0

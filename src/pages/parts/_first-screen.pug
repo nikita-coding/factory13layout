@@ -8,22 +8,28 @@ include ../_mixins
 
 	.container.first-screen__container
 		.first-screen__left
-			.first-screen__title Изготовим корпусную мебель
-			.first-screen__subtitle под ключ за 3-7 дней
-			.first-screen__prod
-				.first-screen__prod-title Производство
-				.first-screen__prod-square 1 000
+			.first-screen__title-wrap
+				.first-screen__title Изготовим корпусную мебель
+				.first-screen__subtitle под ключ за 3-7 дней
+				.first-screen__prod.pc-only
+					.first-screen__prod-title Производство
+					.first-screen__prod-square 1 000
+						span.first-screen__prod-square-m м
+						span.first-screen__prod-square2 2
+
+				.first-screen__prod-mobile.mobile-only Производство 1 000
 					span.first-screen__prod-square-m м
 					span.first-screen__prod-square2 2
 
 			.first-screen__for
-				.first-screen__for1 Для салонов по продаже кухонь,
-				.first-screen__for2 застройщиков, строителей,
-				.first-screen__for2 DIY энтузиастов,
+				.first-screen__for1 Для салонов по продаже кухонь,&#32;
+				.first-screen__for2 застройщиков, строителей,&#32;
+				.first-screen__for2 DIY энтузиастов,&#32;
 				.first-screen__for2 выставочных компаний
 
 			.first-screen__button-wrap
-				.button.button_xl(data-scroll="#quiz_section") Рассчитать стоимость
+				.button.button_xl.pc-only(data-scroll="#quiz_section") Рассчитать стоимость
+				.button.button_xl.mobile-only(data-fancybox="" data-src="#calc_price_modal") Рассчитать стоимость
 				.first-screen__price-today скажем стоимость и сроки сегодня
 
 		.first-screen__right
@@ -37,3 +43,24 @@ include ../_mixins
 			.first-screen__autograph
 				.first-screen__autograph-name Кочнев Илья Дмитриевич
 				.first-screen__autograph-who Основатель компании
+
+	.modal.modal_form.calc-price-modal#calc_price_modal
+		.title-block
+			.title-block__title.modal__title Рассчитать стоимость
+			.modal__subtitle
+				div Оставьте свой номер.
+				br
+				div Наш менеджер сразу же с вами свяжется, уточнит детали заказа и назовет стоимость и сроки.
+
+		form(action="/thanks/" method="post")
+			input(type="hidden" name="form-name" value="Рассчитать стоимость")
+
+			.modal__phone-form
+				.form-group
+					input.js-phone.form-group__input.form-group__input_phone.form-group__input_modal.text-input(type="text" name="phone" placeholder="+7 (___) ___-__-__" required)
+
+				.modal__button
+					button.button.button_xl.button_w100 Перезвоните мне
+
+			.modal__form-pk Нажимая на кнопку, вы соглашаетесь с&#32;
+				a(href="/policy/" target="_blank") политикой конфиденциальности

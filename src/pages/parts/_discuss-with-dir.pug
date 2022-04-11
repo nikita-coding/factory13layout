@@ -3,16 +3,22 @@
 		.discuss-with-dir__flex
 			.discuss-with-dir__left
 				.title-block.title-block_left
-					.title-block__title Хотите&#32;
+					.title-block__title.discuss-with-dir__title Хотите&#32;
 						.text-gold обсудить
 						|  сотрудничество&#32;
 						.text-gold лично с&nbsp;директором?
 				.discuss-with-dir__coffee Приходите в офис на чашечку кофе
+
+				.discuss-with-dir__mobile-dir.mobile-only
+					+assets_img("discuss-with-dir", "jpg")
+					.discuss-with-dir__name Кочнев Илья Дмитриевич
+					.discuss-with-dir__who Директор
+
 				.discuss-with-dir__button
 					.button.button_xl(data-fancybox="" data-src="#dir_modal") Записаться на встречу с&nbsp;директором
 					.discuss-with-dir__under-button для руководителей
 
-			.discuss-with-dir__right
+			.discuss-with-dir__right.pc-only
 				+assets_img("discuss-with-dir", "jpg")
 				.discuss-with-dir__name Кочнев Илья Дмитриевич
 				.discuss-with-dir__who Директор

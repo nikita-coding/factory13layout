@@ -32,6 +32,7 @@
 		right: 67rem
 		top: 18rem
 		margin: auto
+		width: 100%
 
 
 	&__title
@@ -122,3 +123,27 @@
 	.contacts
 		&:before, &:after
 			background-size: cover
+
+
+@media screen and (max-width: $mob-width)
+	.contacts
+		height: unset
+		min-height: unset
+
+		&:before, &:after
+			display: none
+
+		&__panel
+			border-radius: 0
+			box-shadow: none
+			right: 0
+			top: 0
+			position: static
+			padding: 2rem 2rem 0
+
+		&__map
+			display: none
+
+		&__item
+			&_phone
+				font-size: 2.4rem

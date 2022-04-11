@@ -29,3 +29,17 @@
 	&__sepatator
 		width: 1px
 		background: rgba(#C7B299, .3)
+		flex-shrink: 0
+
+@media screen and (max-width: $mob-width)
+	.first-screen-bottom
+		padding: 2.4rem 0.5rem 2.4rem 4rem
+		&__items
+			flex-direction: column
+			padding-left: 0
+
+		&__item
+			align-self: flex-start
+
+		&__sepatator
+			display: none
